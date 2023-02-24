@@ -252,7 +252,7 @@ Widget bottomNavigationIcon(IconData icon) {
         height: 30.0,
         width: 30.0,
         decoration: BoxDecoration(
-          color: const Color(0xffF7F7FC),
+          color: const Color(0xffE1E8FF),
           borderRadius: BorderRadius.circular(12.0),
         ),
       ),
