@@ -31,7 +31,8 @@ class Home extends StatelessWidget {
                       child: Text(
                         'Good Morning,\nBernice',
                         textAlign: TextAlign.left,
-                        style: TextStyle(fontSize: 20.0),
+                        style: TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
                       ),
                     ),
                     const Icon(
@@ -156,8 +157,8 @@ class Home extends StatelessWidget {
                     'assets/first.png',
                     'assets/first.png'
                   ],
-                  numOfPersons: '754',
-                  numOfPersonsSpeaking: '9',
+                  numOfPersons: '354',
+                  numOfPersonsSpeaking: '7',
                 ),
                 const SizedBox(
                   height: 15.0,

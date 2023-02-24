@@ -70,6 +70,9 @@ class Happening extends StatelessWidget {
                     children: [
                       const Icon(Icons.person),
                       Text(numOfPersons),
+                      const SizedBox(
+                        width: 8.0,
+                      ),
                       const Icon(Icons.mic),
                       Text(numOfPersonsSpeaking),
                     ],
