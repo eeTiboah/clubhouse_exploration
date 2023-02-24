@@ -16,202 +16,185 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+      body: ListView(
+        shrinkWrap: true,
         children: [
-          ListView(
-            shrinkWrap: true,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
                   children: [
-                    Row(
-                      children: [
-                        const Flexible(
-                          fit: FlexFit.tight,
-                          child: Text(
-                            'Good Morning,\nBernice',
-                            textAlign: TextAlign.left,
-                            style: TextStyle(fontSize: 20.0),
-                          ),
-                        ),
-                        const Icon(
-                          Icons.search,
-                          size: 30.0,
-                        ),
-                        const SizedBox(
-                          width: 15.0,
-                        ),
-                        Image.asset("assets/small.png")
-                      ],
+                    const Flexible(
+                      fit: FlexFit.tight,
+                      child: Text(
+                        'Good Morning,\nBernice',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(fontSize: 20.0),
+                      ),
+                    ),
+                    const Icon(
+                      Icons.search,
+                      size: 30.0,
                     ),
                     const SizedBox(
-                      height: 20.0,
+                      width: 15.0,
                     ),
-                    SizedBox(
-                      height: 50.0,
-                      child: ListView.separated(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: filters.length,
-                        itemBuilder: (context, index) => filters[index],
-                        separatorBuilder: (context, index) => const SizedBox(
-                          width: 20.0,
+                    Image.asset("assets/small.png")
+                  ],
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                SizedBox(
+                  height: 50.0,
+                  child: ListView.separated(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: filters.length,
+                    itemBuilder: (context, index) => filters[index],
+                    separatorBuilder: (context, index) => const SizedBox(
+                      width: 20.0,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15.0,
+                ),
+                const Text(
+                  'Upcoming',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0),
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                Stack(
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      height: 100.0,
+                      decoration: const BoxDecoration(
+                        color: Color(0xff5D5FEF),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(20.0),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const VerticalDivider(
+                                  indent: 10.0,
+                                  endIndent: 10.0,
+                                  thickness: 3.0,
+                                  color: Color(0xffF7936F),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: const [
+                                      Text(
+                                        '10:00 - 20:00',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18.0),
+                                      ),
+                                      SizedBox(
+                                        height: 5.0,
+                                      ),
+                                      Text(
+                                        'Design talks and chill',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20.0),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const Icon(
+                              Icons.keyboard_arrow_down,
+                              color: Colors.white,
+                            )
+                          ],
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      height: 15.0,
-                    ),
-                    const Text(
-                      'Upcoming',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 15.0),
-                    ),
-                    const SizedBox(
-                      height: 20.0,
-                    ),
-                    Stack(
-                      children: [
-                        Container(
-                          width: double.infinity,
-                          height: 100.0,
-                          decoration: const BoxDecoration(
-                            color: Color(0xff5D5FEF),
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(20.0),
-                            ),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    const VerticalDivider(
-                                      indent: 10.0,
-                                      endIndent: 10.0,
-                                      thickness: 3.0,
-                                      color: Color(0xffF7936F),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: const [
-                                          Text(
-                                            '10:00 - 20:00',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 18.0),
-                                          ),
-                                          SizedBox(
-                                            height: 5.0,
-                                          ),
-                                          Text(
-                                            'Design talks and chill',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 20.0),
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                const Icon(
-                                  Icons.keyboard_arrow_down,
-                                  color: Colors.white,
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                        const Positioned(
-                          top: 12.0,
-                          right: 120.0,
-                          child: Text(
-                            '✌🏽',
-                            style: TextStyle(fontSize: 25.0),
-                          ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 15.0,
-                    ),
-                    const Text(
-                      'Happening now',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 15.0),
-                    ),
-                    const SizedBox(
-                      height: 15.0,
-                    ),
-                    const Happening(
-                      title: 'STARTUP CLUB',
-                      subtitle:
-                          'Pitch your startup idea to VCs & top Entrepreneurs',
-                      imgPaths: [
-                        'assets/first.png',
-                        'assets/first.png',
-                        'assets/first.png'
-                      ],
-                      numOfPersons: '754',
-                      numOfPersonsSpeaking: '9',
-                    ),
-                    const SizedBox(
-                      height: 15.0,
-                    ),
-                    const Happening(
-                      title: 'DATING GAME + SHOOT SHOT',
-                      subtitle:
-                          'Pitch your startup idea to VCs & top Entrepreneurs',
-                      imgPaths: [
-                        'assets/first.png',
-                        'assets/first.png',
-                        'assets/first.png'
-                      ],
-                      numOfPersons: '754',
-                      numOfPersonsSpeaking: '9',
+                    const Positioned(
+                      top: 12.0,
+                      right: 120.0,
+                      child: Text(
+                        '✌🏽',
+                        style: TextStyle(fontSize: 25.0),
+                      ),
                     )
                   ],
                 ),
-              ),
-            ],
-          ),
-          Positioned(
-              bottom: 1.0,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Align(
-                  // alignment: const Alignment(0.0, 1.0),
-                  child: SizedBox(
-                    width: 350.0,
-                    // height: 95.0,
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(90.0),
-                        child: Container(
-                          child: Padding(
-                            padding:
-                                const EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 5.0),
-                            child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  bottomNavigationIcon(Icons.calendar_month),
-                                  bottomNavigationButton(Icons.add, () {}),
-                                  bottomNavigationIcon(Icons.person)
-                                ]),
-                          ),
-                        )),
-                  ),
+                const SizedBox(
+                  height: 15.0,
                 ),
-              )),
+                const Text(
+                  'Happening now',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0),
+                ),
+                const SizedBox(
+                  height: 15.0,
+                ),
+                const Happening(
+                  title: 'STARTUP CLUB',
+                  subtitle:
+                      'Pitch your startup idea to VCs & top Entrepreneurs',
+                  imgPaths: [
+                    'assets/first.png',
+                    'assets/first.png',
+                    'assets/first.png'
+                  ],
+                  numOfPersons: '754',
+                  numOfPersonsSpeaking: '9',
+                ),
+                const SizedBox(
+                  height: 15.0,
+                ),
+                const Happening(
+                  title: 'DATING GAME + SHOOT SHOT',
+                  subtitle:
+                      'Pitch your startup idea to VCs & top Entrepreneurs',
+                  imgPaths: [
+                    'assets/first.png',
+                    'assets/first.png',
+                    'assets/first.png'
+                  ],
+                  numOfPersons: '754',
+                  numOfPersonsSpeaking: '9',
+                )
+              ],
+            ),
+          ),
         ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: ClipRRect(
+            borderRadius: BorderRadius.circular(90.0),
+            child: Container(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 5.0),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      bottomNavigationIcon(Icons.calendar_month),
+                      bottomNavigationButton(Icons.add, () {}),
+                      bottomNavigationIcon(Icons.person)
+                    ]),
+              ),
+            )),
       ),
     );
   }
