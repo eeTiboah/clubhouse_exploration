@@ -154,8 +154,8 @@ class Home extends StatelessWidget {
                       'Pitch your startup idea to VCs & top Entrepreneurs',
                   imgPaths: [
                     'assets/first.png',
-                    'assets/first.png',
-                    'assets/first.png'
+                    'assets/second.png',
+                    'assets/third.png'
                   ],
                   numOfPersons: '354',
                   numOfPersonsSpeaking: '7',
@@ -168,9 +168,9 @@ class Home extends StatelessWidget {
                   subtitle:
                       'Pitch your startup idea to VCs & top Entrepreneurs',
                   imgPaths: [
-                    'assets/first.png',
-                    'assets/first.png',
-                    'assets/first.png'
+                    'assets/fourth.png',
+                    'assets/fifth.png',
+                    'assets/third.png'
                   ],
                   numOfPersons: '754',
                   numOfPersonsSpeaking: '9',
